@@ -55,7 +55,7 @@ def main():
 
     github = GitHubConnect(github_url, organisation_name, github_user, github_pat, repo_name)
     
-    if (true):
+    if True:
         github.create_repository()
     else:
         print("Fail to create Repository")
