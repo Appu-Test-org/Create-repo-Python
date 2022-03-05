@@ -18,13 +18,14 @@ jobs:
       run: |
         python -m pip install --upgrade pip
         pip install pylint
-    - name: printing Env variables
-      uses: actions/checkout@v2
-      with:
-          owner: ${{ github.repository_owner }}
-          repo: ${{ github.event.repository.name }}
-          pr_number: '276'
-          token: ${{ secrets.GITHUB_TOKEN }}
+        pip install requests
+#     - name: printing Env variables
+#       uses: actions/checkout@v2
+#       with:
+#           owner: ${{ github.repository_owner }}
+#           repo: ${{ github.event.repository.name }}
+#           pr_number: '276'
+#           token: ${{ secrets.GITHUB_TOKEN }}
     - name: Analysing the code with pylint
       run: |
         python main.py
