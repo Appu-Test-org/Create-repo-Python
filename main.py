@@ -43,6 +43,8 @@ class GitHubConnect():
             logging.error("Unable to update repository to internal group")
             exit(1)
 def main():
+    
+    parser = argparse.ArgumentParser(description='Single Click Utility')
     parser.add_argument('-pat', '--pat', help='Please provide the GitHub PAT (Persional Access Token)', required=True)
    
     github_url = "https://api.github.com"
