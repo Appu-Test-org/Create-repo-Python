@@ -23,6 +23,7 @@ class GitHubConnect():
         logging.debug(response_data)
         if response_code == 201:
             self.patch_repository_to_internal()
+            
         else:
             logging.error("Unable to create the repository: " + self.repo_name)
             exit(1)
@@ -44,16 +45,16 @@ class GitHubConnect():
             exit(1)
 def main():
     
-    parser = argparse.ArgumentParser(description='Single Click Utility')
-    parser.add_argument('pat', help='Please provide the GitHub PAT (Persional Access Token)', required=True)
-    args = vars(parser.parse_args())
+#     parser = argparse.ArgumentParser(description='Single Click Utility')
+#     parser.add_argument('pat', help='Please provide the GitHub PAT (Persional Access Token)', required=True)
+#     args = vars(parser.parse_args())
    
     github_url = "https://api.github.com"
     organisation_name = "Appu-Test-org"
 #     args["org_name"]
     github_user = "appuraj-philips"
 #     args["user_name"]
-    github_pat = args["pat"]
+    github_pat = os.environ["pat"]
 
 #     repo_name = args["repo_name"]
 #     branch_name = args["branch_name"]
