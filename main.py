@@ -1,7 +1,7 @@
 import argparse
 import os, json
 import logging
-import urllib3
+# import urllib3
 import requests
 from requests.auth import HTTPBasicAuth
 print("Hello its a ----main.py-----")
