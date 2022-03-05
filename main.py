@@ -55,6 +55,8 @@ def main():
     github_user = "appuraj-philips"
 #     args["user_name"]
     github_pat = os.getenv('pat')
+    print("+++++++++++++++++")
+    print(github_pat)
 
 #     repo_name = args["repo_name"]
 #     branch_name = args["branch_name"]
