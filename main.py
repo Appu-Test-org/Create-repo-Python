@@ -27,7 +27,13 @@ class GitHubConnect():
             logging.error("Unable to create the repository: " + self.repo_name)
             exit(1)
 
-  
+    
+    def post_api_call(self, url, data):
+        logging.info("post_api_call URL: " + url)
+        response = requests.post(url, data=data, auth=(self.github_user, self.github_pat))
+        logging.info("POST call response: " + str(response))
+        return response.text, response.status_code
+    
     def patch_repository_to_internal(self):
         data = {"visibility": "internal"}
         URL = self.github_url + "/repos/" + self.github_organisation_name + "/" + self.repo_name
