@@ -13,7 +13,7 @@ class GitHubConnect():
         self.github_user = github_user
         self.github_pat = github_pat
 #         self.repo_name = repo_name
-        self.branch_name = branch_name
+#         self.branch_name = branch_name
         
     def create_repository(self):
         # https://docs.github.com/en/rest/reference/repos#create-a-repository-using-a-template
