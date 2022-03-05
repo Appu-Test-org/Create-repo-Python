@@ -55,15 +55,10 @@ def main():
 
     github = GitHubConnect(github_url, organisation_name, github_user, github_pat, repo_name)
     
-    if request_type == "Onboard":
-        if template_repo_name == "None":
-            github.create_repository()
-        else:
-            github.create_repository_from_template_repository(template_repo_name)
-    elif request_type == "Offboard":
-        github.delete_repository()
-        
-    github.update_issue(request_type, issue_number)
-
+    if (true):
+        github.create_repository()
+    else:
+        print("Fail to create Repository")
+    
 if __name__ == '__main__':
     main()
