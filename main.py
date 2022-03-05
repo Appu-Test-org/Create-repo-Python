@@ -42,7 +42,7 @@ def main():
     organisation_name = "Appu-Test-org"
 #     args["org_name"]
     github_user = "appuraj-philips"
-    args["user_name"]
+#     args["user_name"]
     github_pat = "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"
 #     args["pat"]
 
