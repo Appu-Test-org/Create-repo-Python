@@ -7,12 +7,12 @@ from requests.auth import HTTPBasicAuth
 print("Hello its a ----main.py-----")
 
 class GitHubConnect():
-    def __init__(self, github_url, organisation_name, github_user, github_pat, repo_name, branch_name):
+    def __init__(self, github_url, organisation_name, github_user, github_pat, repo_name):
         self.github_url = github_url
         self.github_organisation_name = organisation_name
         self.github_user = github_user
         self.github_pat = github_pat
-#         self.repo_name = repo_name
+        self.repo_name = repo_name
 #         self.branch_name = branch_name
         
     def create_repository(self):
