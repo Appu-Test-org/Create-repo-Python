@@ -45,7 +45,7 @@ class GitHubConnect():
 def main():
     
     parser = argparse.ArgumentParser(description='Single Click Utility')
-    parser.add_argument('-pat', '--pat', help='Please provide the GitHub PAT (Persional Access Token)', required=True)
+    parser.add_argument('pat', help='Please provide the GitHub PAT (Persional Access Token)', required=True)
     args = vars(parser.parse_args())
    
     github_url = "https://api.github.com"
