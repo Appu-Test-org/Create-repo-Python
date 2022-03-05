@@ -39,18 +39,21 @@ class GitHubConnect():
 def main():
    
     github_url = "https://api.github.com"
-    organisation_name = args["org_name"]
-    github_user = args["user_name"]
-    github_pat = args["pat"]
+    organisation_name = "Appu-Test-org"
+#     args["org_name"]
+    github_user = "appuraj-philips"
+    args["user_name"]
+    github_pat = "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"
+#     args["pat"]
 
-    repo_name = args["repo_name"]
-    branch_name = args["branch_name"]
-    template_repo_name = args["template_repo_name"]
-    request_type = args["request_type"]
-    issue_number= args["issue_number"]
+#     repo_name = args["repo_name"]
+#     branch_name = args["branch_name"]
+#     template_repo_name = args["template_repo_name"]
+#     request_type = args["request_type"]
+#     issue_number= args["issue_number"]
     repo_name = "Appu"
 
-    github = GitHubConnect(github_url, organisation_name, github_user, github_pat, repo_name, branch_name)
+    github = GitHubConnect(github_url, organisation_name, github_user, github_pat, repo_name)
     
     if request_type == "Onboard":
         if template_repo_name == "None":
