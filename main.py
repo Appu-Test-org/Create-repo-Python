@@ -43,7 +43,7 @@ def main():
 #     args["org_name"]
     github_user = "appuraj-philips"
 #     args["user_name"]
-    github_pat = "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"
+   # github_pat = "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"
 #     args["pat"]
 
 #     repo_name = args["repo_name"]
