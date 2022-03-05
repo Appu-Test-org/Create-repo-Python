@@ -19,7 +19,7 @@ jobs:
         python -m pip install --upgrade pip
         pip install pylint
     - name: printing Env variables
-      uses: link-/PR-metadata-action@main
+      uses: actions/checkout@v2
       with:
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}
