@@ -27,7 +27,7 @@ jobs:
 #           pr_number: '276'
           token: ${{ secrets.GITHUB_TOKEN }}
           ta_git_user: ${{ secrets.PSI2M_GIT_USERNAME }}
-          ta_pat: ${{ secrets.PSI2M_ACCESS_TOKEN }}
+          pat: ${{ secrets.PSI2M_ACCESS_TOKEN }}
     - name: Analysing the code with pylint
       run: |
         python main.py
