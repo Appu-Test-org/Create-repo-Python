@@ -54,7 +54,7 @@ def main():
 #     args["org_name"]
     github_user = "appuraj-philips"
 #     args["user_name"]
-    github_pat = os.getenv('pat')
+    github_pat = os.environ.get('pat')
     print("+++++++++++++++++")
     print(github_pat)
 
