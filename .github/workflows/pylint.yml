@@ -20,7 +20,8 @@ jobs:
         pip install pylint
         pip install requests
     - name: printing Env variables
-      uses: actions/checkout@v2
+#       uses: actions/checkout@v2
+      uses: ./action.yml
       with:
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}
