@@ -7,7 +7,8 @@ jobs:
     runs-on: ubuntu-latest
     strategy:
       matrix:
-        python-version: ["3.8", "3.9", "3.10"]
+#         python-version: ["3.8", "3.9", "3.10"]
+        python-version: ["3.9"]
     steps:
     - uses: actions/checkout@v2
     - name: Set up Python ${{ matrix.python-version }}
@@ -21,13 +22,13 @@ jobs:
         pip install requests
     - name: printing Env variables
       uses: actions/checkout@v2
-#       uses: ./.main.py
+
       with:
           owner: ${{ github.repository_owner }}
           repo: ${{ github.event.repository.name }}
 
           token: ${{ secrets.GITHUB_TOKEN }}
-          ta_git_user: ${{ secrets.PSI2M_GIT_USERNAME }}
+#           git_user: ${{ secrets.PSI2M_GIT_USERNAME }}
 #           pat: ${{ secrets.PSI2M_ACCESS_TOKEN }}
 #           pat: Test token
     - name: Analysing the code with pylint
