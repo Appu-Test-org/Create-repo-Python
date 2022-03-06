@@ -21,8 +21,9 @@ class GitHubConnect():
         URL = self.github_url + "/orgs/" + self.github_organisation_name + "/repos"
         response_data, response_code = self.post_api_call(URL, json.dumps(data))
         logging.debug(response_data)
-        if response_code == 201:
+        if response_code =! 201:
             self.patch_repository_to_internal()
+            print("Repository has been created at ",owner)
             
         else:
             logging.error("Unable to create the repository: " + self.repo_name)
