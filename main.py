@@ -53,11 +53,12 @@ def main():
     github_url = "https://api.github.com"
     organisation_name = "Appu-Test-org"
 #     args["org_name"]
-    github_user = "appuraj-philips"
-#     args["user_name"]
-    github_pat = os.environ.get('pat')
-    print("+++++++++++++++++")
-    print(github_pat)
+    github_user = os.environ['ta_git_user']
+#     "appuraj-philips"
+#     args["user_name"] 
+    github_pat = os.environ['token']
+    print("----------------+++++++++++++++++-----------------")
+    print(github_pat,github_user)
 
 #     repo_name = args["repo_name"]
 #     branch_name = args["branch_name"]
