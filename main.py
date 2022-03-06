@@ -21,7 +21,7 @@ class GitHubConnect():
         URL = self.github_url + "/orgs/" + self.github_organisation_name + "/repos"
         response_data, response_code = self.post_api_call(URL, json.dumps(data))
         logging.debug(response_data)
-        if response_code =! 201:
+        if (response_code != 201):
             self.patch_repository_to_internal()
             print("Repository has been created at ",owner)
             
@@ -41,7 +41,7 @@ class GitHubConnect():
         URL = self.github_url + "/repos/" + self.github_organisation_name + "/" + self.repo_name
         response_data, response_code = self.post_api_call(URL, json.dumps(data))
         logging.debug(response_data)
-        if (response_code  != 200):
+        if response_code  == 200:
             logging.error("Unable to update repository to internal group")
             exit(1)
 def main():
