@@ -23,7 +23,7 @@ class GitHubConnect():
         logging.debug(response_data)
         if (response_code != 201):
             self.patch_repository_to_internal()
-            print("Repository has been created at ",owner)
+            print("Repository has been created at ",self.github_organisation_name)
             
         else:
             logging.error("Unable to create the repository: " + self.repo_name)
