@@ -37,7 +37,7 @@ class GitHubConnect():
         return response.text, response.status_code
     
     def patch_repository_to_internal(self):
-        data = {"visibility": "internal"}
+        data = {"visibility": "private"}
         URL = self.github_url + "/repos/" + self.github_organisation_name + "/" + self.repo_name
         response_data, response_code = self.post_api_call(URL, json.dumps(data))
         logging.debug(response_data)
